@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-MyCoreApp-B90EEBF8-9497-4CF7-9765-42D6540A36D2</UserSecretsId>
+  </PropertyGroup>
+
+   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App">
+      <PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
+      <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>

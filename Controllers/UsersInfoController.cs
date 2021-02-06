@@ -15,6 +15,8 @@ using tik4net.Objects.Ip.Dns;
 using tik4net.Objects.Ip.Firewall;
 using tik4net.Objects.Queue;
 using tik4net.Objects.System;
+using MyCoreApp.Helper;
+
 
 
 namespace MyCoreApp.Controllers
@@ -162,6 +164,20 @@ namespace MyCoreApp.Controllers
         private bool UsersInfoExists(int id)
         {
             return _context.UsersInfo.Any(e => e.Id == id);
+        }
+        public IActionResult About()
+        {
+            //ViewData["Message"] = "Your application description page.";
+
+            //return View();
+            
+           
+           
+           
+           return Mikrotik.Log;
+           
+           
+           
         }
     }
 }

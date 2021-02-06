@@ -13453,6 +13453,7 @@
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
       "Pomelo.EntityFrameworkCore.MySql >= 2.1.1",
+      "System.Net.Sockets >= 4.3.0",
       "tik4net >= 3.5.0"
     ]
   },
@@ -13473,7 +13474,7 @@
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/umit/.config/NuGet/NuGet.Config"
+        "/Users/umit/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -13541,6 +13542,10 @@
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
             "version": "[2.1.1, )"
+          },
+          "System.Net.Sockets": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           },
           "tik4net": {
             "target": "Package",

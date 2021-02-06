@@ -8,6 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using MyCoreApp.Data;
 using MyCoreApp.Models;
 using DanilovSoft.MikroApi;
+using System.IO;
+using System.Net.Sockets;
+using MyCoreApp.Helper;
 
 
 namespace MyCoreApp.Controllers
@@ -156,19 +159,30 @@ namespace MyCoreApp.Controllers
         {
             return _context.UsersInfo.Any(e => e.Id == id);
         }
-        public IActionResult About()
-        {
-            //ViewData["Message"] = "Your application description page.";
+        
+        
 
-            //return View();
-            
-           
-           
-           
-           return Mikrotik.Log;
-           
-           
-           
-        }
+
+        //class Program
+        //{
+        //        static void Main(string[] args)
+        //    {
+
+        //            MK mikrotik = new MK("vpn.wifiburada.com");
+        //            if (!mikrotik.Login("admin", "As081316"))
+        //    {
+        //            Console.WriteLine("Could not log in");
+        //            mikrotik.Close();
+        //            return;
+        //    }
+        //            mikrotik.Send("/system/identity/getall");
+        //            mikrotik.Send(".tag=sss", true);
+        //            foreach (string h in mikrotik.Read())
+        //    {
+        //            Console.WriteLine(h);
+        //    }
+        //    Console.ReadKey();
+        //    }
+        //}
     }
 }

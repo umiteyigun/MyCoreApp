@@ -1823,6 +1823,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UsersInfo/Delete.cshtml",
+      "TargetPath": "Views\\UsersInfo\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -1853,6 +1858,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UsersInfo/Create.cshtml",
+      "TargetPath": "Views\\UsersInfo\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Shared/_CookieConsentPartial.cshtml",
       "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "FileKind": "mvc"
@@ -1878,6 +1888,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UsersInfo/Index.cshtml",
+      "TargetPath": "Views\\UsersInfo\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Nas/Index.cshtml",
       "TargetPath": "Views\\Nas\\Index.cshtml",
       "FileKind": "mvc"
@@ -1893,8 +1908,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UsersInfo/Details.cshtml",
+      "TargetPath": "Views\\UsersInfo\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Nas/Create.cshtml",
       "TargetPath": "Views\\Nas\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UsersInfo/Edit.cshtml",
+      "TargetPath": "Views\\UsersInfo\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {

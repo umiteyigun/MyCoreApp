@@ -1,0 +1,300 @@
+@model MyCoreApp.Models.UsersInfo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UsersInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Lastname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Packet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Packet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Accesspoint)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Accesspoint)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ftipi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ftipi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Osifre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Osifre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adurum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Adurum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sabitip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sabitip)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Atipi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Atipi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pasaportno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pasaportno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Unvan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Unvan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vergino)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vergino)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cinsiyet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cinsiyet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Uyruk)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Uyruk)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Babaadi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Babaadi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Anaadi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Anaadi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Anakizliksoyadi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Anakizliksoyadi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dogumyeri)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dogumyeri)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dogumtarihi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dogumtarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Meslek)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Meslek)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciltno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ciltno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kutukno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kutukno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sayfano)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sayfano)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kil)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kil)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kilce)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kilce)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mahkoy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mahkoy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ktipi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ktipi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kserino)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kserino)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kverildigiyer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kverildigiyer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kverildigitarih)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kverildigitarih)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ksahibi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ksahibi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Til)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Til)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tilce)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tilce)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tmahalle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tmahalle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tcadde)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tcadde)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tdiskapino)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tdiskapino)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tickapino)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tickapino)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tpostano)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tpostano)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tadresno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tadresno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vergidairesi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vergidairesi)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

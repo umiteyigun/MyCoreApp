@@ -41,3 +41,8 @@
 /Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/obj/Debug/netcoreapp2.1/Razor/Views/Nas/Details.cshtml.g.cs
 /Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/obj/Debug/netcoreapp2.1/Razor/Views/Nas/Edit.cshtml.g.cs
 /Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/obj/Debug/netcoreapp2.1/Razor/Views/Nas/Index.cshtml.g.cs
+/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/obj/Debug/netcoreapp2.1/Razor/Views/UsersInfo/Create.cshtml.g.cs
+/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/obj/Debug/netcoreapp2.1/Razor/Views/UsersInfo/Delete.cshtml.g.cs
+/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/obj/Debug/netcoreapp2.1/Razor/Views/UsersInfo/Details.cshtml.g.cs
+/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/obj/Debug/netcoreapp2.1/Razor/Views/UsersInfo/Edit.cshtml.g.cs
+/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/obj/Debug/netcoreapp2.1/Razor/Views/UsersInfo/Index.cshtml.g.cs

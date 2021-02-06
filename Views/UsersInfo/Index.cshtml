@@ -1,0 +1,311 @@
+@model IEnumerable<MyCoreApp.Models.UsersInfo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lastname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Packet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Accesspoint)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ftipi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Osifre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adurum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sabitip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Atipi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pasaportno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unvan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vergino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cinsiyet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uyruk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Babaadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Anaadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Anakizliksoyadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dogumyeri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dogumtarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Meslek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciltno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kutukno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sayfano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kilce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mahkoy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ktipi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kserino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kverildigiyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kverildigitarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ksahibi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Til)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tilce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tmahalle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tcadde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tdiskapino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tickapino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tpostano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tadresno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vergidairesi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Packet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Accesspoint)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ftipi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Osifre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adurum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sabitip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Atipi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pasaportno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unvan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vergino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cinsiyet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uyruk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Babaadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Anaadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Anakizliksoyadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dogumyeri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dogumtarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Meslek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ciltno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kutukno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sayfano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kilce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mahkoy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ktipi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kserino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kverildigiyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kverildigitarih)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ksahibi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Til)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tilce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tmahalle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tcadde)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tdiskapino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tickapino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tpostano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tadresno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vergidairesi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

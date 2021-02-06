@@ -7,16 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyCoreApp.Data;
 using MyCoreApp.Models;
-using tik4net;
-using tik4net.Api;
-using tik4net.Objects;
-using tik4net.Objects.Ip;
-using tik4net.Objects.Ip.Dns;
-using tik4net.Objects.Ip.Firewall;
-using tik4net.Objects.Queue;
-using tik4net.Objects.System;
-using MyCoreApp.Helper;
-
+using DanilovSoft.MikroApi;
 
 
 namespace MyCoreApp.Controllers

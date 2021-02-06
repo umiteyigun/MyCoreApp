@@ -41,6 +41,10 @@
         "netcoreapp2.1": {
           "targetAlias": "netcoreapp2.1",
           "dependencies": {
+            "InvertedTomato.TikLink": {
+              "target": "Package",
+              "version": "[1.0.63, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -77,6 +81,10 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[2.1.1, )"
+            },
+            "tik4net": {
+              "target": "Package",
+              "version": "[3.5.0, )"
             }
           },
           "imports": [

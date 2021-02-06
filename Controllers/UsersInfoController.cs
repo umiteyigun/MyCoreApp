@@ -7,6 +7,15 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyCoreApp.Data;
 using MyCoreApp.Models;
+using tik4net;
+using tik4net.Api;
+using tik4net.Objects;
+using tik4net.Objects.Ip;
+using tik4net.Objects.Ip.Dns;
+using tik4net.Objects.Ip.Firewall;
+using tik4net.Objects.Queue;
+using tik4net.Objects.System;
+
 
 namespace MyCoreApp.Controllers
 {
@@ -22,7 +31,12 @@ namespace MyCoreApp.Controllers
         // GET: UsersInfo
         public async Task<IActionResult> Index()
         {
-            return View(await _context.UsersInfo.ToListAsync());
+           
+                //var Connection = ConnectionFactory.OpenConnection(TikConnectionType.Api, "vpn.wifiburada.com", "admin", "As081316");
+                //var interfaces = Connection.LoadAll<Interface>();
+                //return interfaces;
+             return View(await _context.UsersInfo.ToListAsync());
+            
         }
 
         // GET: UsersInfo/Details/5

@@ -69,6 +69,10 @@ namespace MyCoreApp.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(usersInfo);
+            //   MyCoreApp.Models.Nas nasss =new MyCoreApp.Models.Nas();
+            //    nasss.Nasname=usersInfo.Address;
+            //    var aa=_context.Users.Where(x=>x.Id=12345);
+            //    _context.Add(nasss);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -160,7 +164,27 @@ namespace MyCoreApp.Controllers
             return _context.UsersInfo.Any(e => e.Id == id);
         }
         
-        
+        public string AhmetMehmet()
+        {
+                MK mikrotik = new MK("vpn.wifiburada.com");
+                
+                    if (!mikrotik.Login("admin", "As081316"))
+            {
+                    //Console.WriteLine("Could not log in");
+                    mikrotik.Close();
+                   return "Hatalı";
+           }
+                var aa = "";
+                   mikrotik.Send("/system/identity/getall");
+                   mikrotik.Send(".tag=sss", true);
+                   foreach (string h in mikrotik.Read())
+            {
+                aa += h+"<br/>";                //return h;
+                    //Console.WriteLine(h);
+                
+            }
+            return aa;
+        }
 
 
         //class Program

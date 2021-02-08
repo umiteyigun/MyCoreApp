@@ -14,65 +14,30 @@ using System.Web;
 
 namespace MyCoreApp.Helper
 {
-    public class MikrotikAPI
-    {
-        string _IPAddress;
-        int _APIPort;
-        bool _UseSSL;
-        Stream _Stream;
-        SslStream _SslStream;
-        TcpClient _TcpClient;
+    public class MK
+    {   
+        Stream connection;
+        TcpClient con;
 
-        public MikrotikAPI(string IPAddress,bool UseSSL = false, int APIPort = 8728)
+        public MK(string ip)
         {
-            _IPAddress = IPAddress;
-            _APIPort = APIPort;            
-            _UseSSL = UseSSL;
+            con = new TcpClient();
+            con.Connect(ip, 8728);
+            connection = (Stream)con.GetStream();
         }
-
-        public static bool ValidateServerCertificate(
-              object sender,
-              X509Certificate certificate,
-              X509Chain chain,
-              SslPolicyErrors sslPolicyErrors)
+        public void Close()
         {
-            return true;
+            connection.Close();
+            con.Close();
         }
-
-        public void Connect()
-        {
-            if (_UseSSL && _APIPort == 8728) _APIPort = 8729;
-
-            _TcpClient = new TcpClient();
-            _TcpClient.Connect(_IPAddress, _APIPort);
-
-            if (_UseSSL)
-            {
-                _SslStream = new SslStream(_TcpClient.GetStream(), false, new RemoteCertificateValidationCallback(ValidateServerCertificate), null);
-                _SslStream.AuthenticateAsClient(_IPAddress);
-            }
-            else
-                _Stream = (Stream)_TcpClient.GetStream();
-        }
-        public void Disconnect()
-        {
-            if (_UseSSL)
-                _Stream.Close();
-            else
-                _SslStream.Close();
-
-            _TcpClient.Close();
-        }
-
-        public bool LoginDeprecated(string Username, string Password)
+        public bool Login(string username, string password)
         {
             Send("/login", true);
-            string hash = Receive()[0].Split(new string[] { "ret=" }, StringSplitOptions.None)[1];
+            string hash = Read()[0].Split(new string[] { "ret=" }, StringSplitOptions.None)[1];
             Send("/login");
-            Send("=name=" + Username);
-            Send("=response=00" + EncodePassword(Password, hash), true);
-            List<string> ReceiveResult = Receive();
-            if (ReceiveResult[0] == "!done")
+            Send("=name=" + username);
+            Send("=response=00" + EncodePassword(password, hash), true);
+            if (Read()[0] == "!done")
             {
                 return true;
             }
@@ -81,234 +46,104 @@ namespace MyCoreApp.Helper
                 return false;
             }
         }
-
-        public bool Login(string Username, string Password, out string OutMessageDesc)
+        public void Send(string co)
         {
-            OutMessageDesc = "";
-
-            Send("/login");
-            Send("=name=" + Username);
-            Send("=password=" + Password, true);
-            List<string> ReceiveResult = Receive();
-            if (ReceiveResult[0] == "!done")
+            Send(co, false);
+        }
+        public void Send(string co, bool endsentence)
+        {
+            byte[] bajty = Encoding.ASCII.GetBytes(co.ToCharArray());
+            byte[] velikost = EncodeLength(bajty.Length);
+            connection.Write(velikost, 0, velikost.Length);
+            connection.Write(bajty, 0, bajty.Length);
+            if (endsentence)
             {
-                return true;
-            }
-            else
-            {
-                OutMessageDesc = ReceiveResult[1];
-                return false;
+                connection.WriteByte(0);
             }
         }
-
-        public void Send(string DataToSend, bool EndofPacket = false)
+        public List<string> Read()
         {
-            if (_UseSSL)
-                DoSendSSL(DataToSend, EndofPacket);
-            else
-                DoSend(DataToSend, EndofPacket);
-        }
-
-        private void DoSend(string DataToSend, bool EndofPacket = false)
-        {
-            byte[] DataToSendasByte = Encoding.ASCII.GetBytes(DataToSend.ToCharArray());
-            byte[] SendSize = EncodeLength(DataToSendasByte.Length);
-            _Stream.Write(SendSize, 0, SendSize.Length);
-            _Stream.Write(DataToSendasByte, 0, DataToSendasByte.Length);
-            if (EndofPacket) _Stream.WriteByte(0);
-        }
-
-        private void DoSendSSL(string DataToSend, bool EndofPacket = false)
-        {
-            byte[] DataToSendasByte = Encoding.ASCII.GetBytes(DataToSend.ToCharArray());
-            byte[] SendSize = EncodeLength(DataToSendasByte.Length);
-            _SslStream.Write(SendSize, 0, SendSize.Length);
-            _SslStream.Write(DataToSendasByte, 0, DataToSendasByte.Length);
-            if (EndofPacket) _SslStream.WriteByte(0);
-        }
-
-        public ArrayList ReceiveList()
-        {
-            List<string> ReceivedDataList;
-
-            if (_UseSSL)
-                ReceivedDataList = DoReceiveSSL();
-            else
-                ReceivedDataList = DoReceive();
-
-            ArrayList DataList = new ArrayList();
-            List<string> ReceivedData = new List<string>();
-            foreach (string DataLine in ReceivedDataList)
-            {
-                if (DataLine == "!re" || DataLine == "!done" || DataLine == "!trap")
-                {
-                    DataList.Add(ReceivedData);
-                    ReceivedData = new List<string>();
-                }
-                else
-                    ReceivedData.Add(DataLine);
-            }
-            if (DataList.Count > 1) DataList.RemoveAt(0);
-
-            return DataList;
-        }
-
-
-        public List<string> Receive()
-        {
-            if (_UseSSL)
-                return DoReceiveSSL();
-            else
-                return DoReceive();
-        }
-
-        private List<string> DoReceive()
-        {
-            List<string> OutputList = new List<string>();
-            long TempReceiveSize;
-            string TempString = "";
-            long ReceiveSize = 0;
+            List<string> output = new List<string>();
+            string o = "";
+            byte[] tmp = new byte[4];
+            long count;
             while (true)
             {
-                TempReceiveSize = (byte)_Stream.ReadByte();
-                if (TempReceiveSize > 0)
+                tmp[3] = (byte)connection.ReadByte();
+                //if(tmp[3] == 220) tmp[3] = (byte)connection.ReadByte(); it sometimes happend to me that 
+                //mikrotik send 220 as some kind of "bonus" between words, this fixed things, not sure about it though
+                if (tmp[3] == 0)
                 {
-                    if ((TempReceiveSize & 0x80) == 0)
+                    output.Add(o);
+                    if (o.Substring(0, 5) == "!done")
                     {
-                        ReceiveSize = TempReceiveSize;
+                        break;
                     }
-                    else if ((TempReceiveSize & 0xC0) == 0x80)
+                    else
                     {
-                        TempReceiveSize &= ~0xC0;
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_Stream.ReadByte();
-                        ReceiveSize = TempReceiveSize;
-                    }
-                    else if ((TempReceiveSize & 0xE0) == 0xC0)
-                    {
-                        TempReceiveSize &= ~0xE0;
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_Stream.ReadByte();
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_Stream.ReadByte();
-                        ReceiveSize = TempReceiveSize;
-                    }
-                    else if ((TempReceiveSize & 0xF0) == 0xE0)
-                    {
-                        TempReceiveSize &= ~0xF0;
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_Stream.ReadByte();
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_Stream.ReadByte();
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_Stream.ReadByte();
-                        ReceiveSize = TempReceiveSize;
-                    }
-                    else if ((TempReceiveSize & 0xF8) == 0xF0)
-                    {
-                        TempReceiveSize += (byte)_Stream.ReadByte();
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_Stream.ReadByte();
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_Stream.ReadByte();
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_Stream.ReadByte();
-                        ReceiveSize = TempReceiveSize;
+                        o = "";
+                        continue;
                     }
                 }
                 else
-                    ReceiveSize = TempReceiveSize;
-
-                for (int i = 0; i < ReceiveSize; i++)
                 {
-                    Char TempChar = (Char)_Stream.ReadByte();
-                    TempString += TempChar;
-                }
-
-                if (ReceiveSize > 0)
-                {
-                    OutputList.Add(TempString);
-                    if (TempString == "!done") break;
-                    TempString = "";
-                }
-            }
-            return OutputList;
-        }
-
-        private List<string> DoReceiveSSL()
-        {
-            List<string> OutputList = new List<string>();
-            long TempReceiveSize;
-            string TempString = "";
-            long ReceiveSize = 0;
-            while (true)
-            {
-                TempReceiveSize = (byte)_SslStream.ReadByte();
-                if (TempReceiveSize > 0)
-                {
-                    if ((TempReceiveSize & 0x80) == 0)
+                    if (tmp[3] < 0x80)
                     {
-                        ReceiveSize = TempReceiveSize;
+                        count = tmp[3];
                     }
-                    else if ((TempReceiveSize & 0xC0) == 0x80)
+                    else
                     {
-                        TempReceiveSize &= ~0xC0;
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_SslStream.ReadByte();
-                        ReceiveSize = TempReceiveSize;
-                    }
-                    else if ((TempReceiveSize & 0xE0) == 0xC0)
-                    {
-                        TempReceiveSize &= ~0xE0;
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_SslStream.ReadByte();
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_SslStream.ReadByte();
-                        ReceiveSize = TempReceiveSize;
-                    }
-                    else if ((TempReceiveSize & 0xF0) == 0xE0)
-                    {
-                        TempReceiveSize &= ~0xF0;
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_SslStream.ReadByte();
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_SslStream.ReadByte();
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_SslStream.ReadByte();
-                        ReceiveSize = TempReceiveSize;
-                    }
-                    else if ((TempReceiveSize & 0xF8) == 0xF0)
-                    {
-                        TempReceiveSize += (byte)_SslStream.ReadByte();
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_SslStream.ReadByte();
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_SslStream.ReadByte();
-                        TempReceiveSize <<= 8;
-                        TempReceiveSize += (byte)_SslStream.ReadByte();
-                        ReceiveSize = TempReceiveSize;
+                        if (tmp[3] < 0xC0)
+                        {
+                            int tmpi = BitConverter.ToInt32(new byte[] { (byte)connection.ReadByte(), tmp[3],0,0 }, 0);
+                            count = tmpi ^ 0x8000;
+                        }
+                        else
+                        {
+                            if (tmp[3] < 0xE0)
+                            {
+                                tmp[2] = (byte)connection.ReadByte();
+                                int tmpi = BitConverter.ToInt32(new byte[] { (byte)connection.ReadByte(), tmp[2], tmp[3],0 }, 0);
+                                count = tmpi ^ 0xC00000;
+                            }
+                            else
+                            {
+                                if (tmp[3] < 0xF0)
+                                {
+                                    tmp[2] = (byte)connection.ReadByte();
+                                    tmp[1] = (byte)connection.ReadByte();
+                                    int tmpi = BitConverter.ToInt32(new byte[] { (byte)connection.ReadByte(), tmp[1], tmp[2], tmp[3] }, 0);
+                                    count = tmpi ^ 0xE0000000;
+                                }
+                                else
+                                {
+                                    if (tmp[3] == 0xF0)
+                                    {
+                                        tmp[3] = (byte)connection.ReadByte();
+                                        tmp[2] = (byte)connection.ReadByte();
+                                        tmp[1] = (byte)connection.ReadByte();
+                                        tmp[0] = (byte)connection.ReadByte();
+                                        count = BitConverter.ToInt32(tmp, 0);
+                                    }
+                                    else
+                                    {
+                                        //Error in packet reception, unknown length
+                                        break;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-                else
-                    ReceiveSize = TempReceiveSize;
 
-                for (int i = 0; i < ReceiveSize; i++)
+                for (int i = 0; i < count; i++)
                 {
-                    Char TempChar = (Char)_SslStream.ReadByte();
-                    TempString += TempChar;
-                }
-
-                if (ReceiveSize > 0)
-                {
-                    OutputList.Add(TempString);
-                    if (TempString == "!done") break;
-                    TempString = "";
+                    o += (Char)connection.ReadByte();
                 }
             }
-            return OutputList;
+            return output;
         }
-
-        private byte[] EncodeLength(int delka)
+        byte[] EncodeLength(int delka)
         {
             if (delka < 0x80)
             {
@@ -337,7 +172,7 @@ namespace MyCoreApp.Helper
             }
         }
 
-        private string EncodePassword(string Password, string hash)
+        public string EncodePassword(string Password, string hash)
         {
             byte[] hash_byte = new byte[hash.Length / 2];
             for (int i = 0; i <= hash.Length - 2; i += 2)
@@ -364,6 +199,5 @@ namespace MyCoreApp.Helper
             }
             return navrat;
         }
-
     }
 }

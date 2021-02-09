@@ -187,26 +187,6 @@ namespace MyCoreApp.Controllers
         }
 
 
-        //class Program
-        //{
-        //        static void Main(string[] args)
-        //    {
 
-        //            MK mikrotik = new MK("vpn.wifiburada.com");
-        //            if (!mikrotik.Login("admin", "As081316"))
-        //    {
-        //            Console.WriteLine("Could not log in");
-        //            mikrotik.Close();
-        //            return;
-        //    }
-        //            mikrotik.Send("/system/identity/getall");
-        //            mikrotik.Send(".tag=sss", true);
-        //            foreach (string h in mikrotik.Read())
-        //    {
-        //            Console.WriteLine(h);
-        //    }
-        //    Console.ReadKey();
-        //    }
-        //}
     }
 }

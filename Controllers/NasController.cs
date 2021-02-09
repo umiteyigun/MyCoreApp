@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyCoreApp.Data;
-using dotnet.Models;
+using MyCoreApp.Models;
 
 namespace MyCoreApp.Controllers
 {

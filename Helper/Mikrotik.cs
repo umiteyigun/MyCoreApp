@@ -15,7 +15,7 @@ using System.Web;
 namespace MyCoreApp.Helper
 {
     public class MK
-    {   
+    {
         Stream connection;
         TcpClient con;
 
@@ -95,7 +95,7 @@ namespace MyCoreApp.Helper
                     {
                         if (tmp[3] < 0xC0)
                         {
-                            int tmpi = BitConverter.ToInt32(new byte[] { (byte)connection.ReadByte(), tmp[3],0,0 }, 0);
+                            int tmpi = BitConverter.ToInt32(new byte[] { (byte)connection.ReadByte(), tmp[3], 0, 0 }, 0);
                             count = tmpi ^ 0x8000;
                         }
                         else
@@ -103,7 +103,7 @@ namespace MyCoreApp.Helper
                             if (tmp[3] < 0xE0)
                             {
                                 tmp[2] = (byte)connection.ReadByte();
-                                int tmpi = BitConverter.ToInt32(new byte[] { (byte)connection.ReadByte(), tmp[2], tmp[3],0 }, 0);
+                                int tmpi = BitConverter.ToInt32(new byte[] { (byte)connection.ReadByte(), tmp[2], tmp[3], 0 }, 0);
                                 count = tmpi ^ 0xC00000;
                             }
                             else
@@ -198,6 +198,22 @@ namespace MyCoreApp.Helper
                 navrat += h.ToString("x2");
             }
             return navrat;
+        }
+        public static Dictionary<int, Dictionary<string, string>> get_parse(MK mik)
+        {
+            Dictionary<int, Dictionary<string, string>> temp = new Dictionary<int, Dictionary<string, string>>();
+            int i = 0;
+            foreach (var item in mik.Read())
+            {
+                Dictionary<string, string> asd = new Dictionary<string, string>();
+                string[] tmp = item.Split('=');
+                for (int k = 0; k < tmp.Length; k += 2)
+                    asd.Add(tmp[k], tmp[k + 1]);
+                temp[i] = asd;
+                i++;
+            }
+            temp.Remove(i - 1);
+            return temp;
         }
     }
 }

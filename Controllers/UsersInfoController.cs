@@ -166,23 +166,28 @@ namespace MyCoreApp.Controllers
         
         public string AhmetMehmet()
         {
-                MK mikrotik = new MK("vpn.wifiburada.com");
+            MK mikrotik = new MK("vpn.wifiburada.com");
                 
                     if (!mikrotik.Login("admin", "As081316"))
             {
                     //Console.WriteLine("Could not log in");
                     mikrotik.Close();
                    return "Hatalı";
-           }
+            }
                 var aa = "";
-                   mikrotik.Send("/system/identity/getall");
+                //var aaa = "";
+                   mikrotik.Send("/ip/service/print");
                    mikrotik.Send(".tag=sss", true);
                    foreach (string h in mikrotik.Read())
             {
-                aa += h+"<br/>";                //return h;
-                    //Console.WriteLine(h);
+                aa += h;
+                aa +="\n";            
+                //return h;
+                //Console.WriteLine(h);
                 
             }
+            
+            
             return aa;
         }
 

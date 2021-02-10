@@ -11,7 +11,7 @@ using DanilovSoft.MikroApi;
 using System.IO;
 using System.Net.Sockets;
 using MyCoreApp.Helper;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace MyCoreApp.Controllers
 {
@@ -163,7 +163,7 @@ namespace MyCoreApp.Controllers
         {
             return _context.UsersInfo.Any(e => e.Id == id);
         }
-        
+        [Authorize]
         public string AhmetMehmet()
         {
             MK mikrotik = new MK("vpn.wifiburada.com");

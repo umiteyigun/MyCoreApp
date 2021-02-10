@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace dotnet.Models
+namespace MyCoreApp.Models
 {
     public partial class Radusergroup
     {

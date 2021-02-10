@@ -1,0 +1,156 @@
+@model MyCoreApp.Models.Radacct
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Radacct</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Radacctid" />
+            <div class="form-group">
+                <label asp-for="Acctsessionid" class="control-label"></label>
+                <input asp-for="Acctsessionid" class="form-control" />
+                <span asp-validation-for="Acctsessionid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Acctuniqueid" class="control-label"></label>
+                <input asp-for="Acctuniqueid" class="form-control" />
+                <span asp-validation-for="Acctuniqueid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Groupname" class="control-label"></label>
+                <input asp-for="Groupname" class="form-control" />
+                <span asp-validation-for="Groupname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Realm" class="control-label"></label>
+                <input asp-for="Realm" class="form-control" />
+                <span asp-validation-for="Realm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nasipaddress" class="control-label"></label>
+                <input asp-for="Nasipaddress" class="form-control" />
+                <span asp-validation-for="Nasipaddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nasportid" class="control-label"></label>
+                <input asp-for="Nasportid" class="form-control" />
+                <span asp-validation-for="Nasportid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nasporttype" class="control-label"></label>
+                <input asp-for="Nasporttype" class="form-control" />
+                <span asp-validation-for="Nasporttype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Acctstarttime" class="control-label"></label>
+                <input asp-for="Acctstarttime" class="form-control" />
+                <span asp-validation-for="Acctstarttime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Acctstoptime" class="control-label"></label>
+                <input asp-for="Acctstoptime" class="form-control" />
+                <span asp-validation-for="Acctstoptime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Acctsessiontime" class="control-label"></label>
+                <input asp-for="Acctsessiontime" class="form-control" />
+                <span asp-validation-for="Acctsessiontime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Acctauthentic" class="control-label"></label>
+                <input asp-for="Acctauthentic" class="form-control" />
+                <span asp-validation-for="Acctauthentic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConnectinfoStart" class="control-label"></label>
+                <input asp-for="ConnectinfoStart" class="form-control" />
+                <span asp-validation-for="ConnectinfoStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConnectinfoStop" class="control-label"></label>
+                <input asp-for="ConnectinfoStop" class="form-control" />
+                <span asp-validation-for="ConnectinfoStop" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Acctinputoctets" class="control-label"></label>
+                <input asp-for="Acctinputoctets" class="form-control" />
+                <span asp-validation-for="Acctinputoctets" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Acctoutputoctets" class="control-label"></label>
+                <input asp-for="Acctoutputoctets" class="form-control" />
+                <span asp-validation-for="Acctoutputoctets" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Calledstationid" class="control-label"></label>
+                <input asp-for="Calledstationid" class="form-control" />
+                <span asp-validation-for="Calledstationid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Callingstationid" class="control-label"></label>
+                <input asp-for="Callingstationid" class="form-control" />
+                <span asp-validation-for="Callingstationid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Acctterminatecause" class="control-label"></label>
+                <input asp-for="Acctterminatecause" class="form-control" />
+                <span asp-validation-for="Acctterminatecause" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Servicetype" class="control-label"></label>
+                <input asp-for="Servicetype" class="form-control" />
+                <span asp-validation-for="Servicetype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Framedprotocol" class="control-label"></label>
+                <input asp-for="Framedprotocol" class="form-control" />
+                <span asp-validation-for="Framedprotocol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Framedipaddress" class="control-label"></label>
+                <input asp-for="Framedipaddress" class="form-control" />
+                <span asp-validation-for="Framedipaddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Acctstartdelay" class="control-label"></label>
+                <input asp-for="Acctstartdelay" class="form-control" />
+                <span asp-validation-for="Acctstartdelay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Acctstopdelay" class="control-label"></label>
+                <input asp-for="Acctstopdelay" class="form-control" />
+                <span asp-validation-for="Acctstopdelay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Xascendsessionsvrkey" class="control-label"></label>
+                <input asp-for="Xascendsessionsvrkey" class="form-control" />
+                <span asp-validation-for="Xascendsessionsvrkey" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Btk" class="control-label"></label>
+                <input asp-for="Btk" class="form-control" />
+                <span asp-validation-for="Btk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

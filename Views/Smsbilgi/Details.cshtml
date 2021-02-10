@@ -1,0 +1,48 @@
+@model MyCoreApp.Models.Smsbilgi
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Smsbilgi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Smsuser)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Smsuser)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Smspass)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Smspass)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Smsno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Smsno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Smsapi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Smsapi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dis)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

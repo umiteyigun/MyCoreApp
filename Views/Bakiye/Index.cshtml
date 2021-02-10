@@ -1,0 +1,77 @@
+@model IEnumerable<MyCoreApp.Models.Bakiye>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gelir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gider)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ekleyen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Baglanti)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Baglantitip)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gelir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gider)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tarih)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ekleyen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aciklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Baglanti)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Baglantitip)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Bakiyeid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Bakiyeid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Bakiyeid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

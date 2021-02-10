@@ -1,0 +1,36 @@
+@model MyCoreApp.Models.Sayi
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sayi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NatSayi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NatSayi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KutukSayi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KutukSayi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

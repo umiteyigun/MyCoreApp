@@ -1,0 +1,132 @@
+@model MyCoreApp.Models.Basvuru
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Basvuru</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Badi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Badi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bsoyadi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bsoyadi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Btc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Btc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bemail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bemail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Badresi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Badresi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Btelefon1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Btelefon1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Btelefon2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Btelefon2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Btelefon3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Btelefon3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bpaket)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bpaket)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bftipi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bftipi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bil)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bil)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bilce)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bilce)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Brandevu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Brandevu)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bsms)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bsms)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bsmsid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bsmsid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bbildiren)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bbildiren)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bsonuc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bsonuc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Baciklama)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Baciklama)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bhakedis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bhakedis)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

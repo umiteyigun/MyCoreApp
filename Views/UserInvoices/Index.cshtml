@@ -1,0 +1,119 @@
+@model IEnumerable<MyCoreApp.Models.UserInvoices>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Peydate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Packet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tdurum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Taciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tyapan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kaciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kmesaj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Taksit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tekrar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Otarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mcoid)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Peydate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Expire)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Packet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tdurum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Taciklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tyapan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kaciklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kmesaj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Taksit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tekrar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Otarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mcoid)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,75 @@
+@model MyCoreApp.Models.Radippool
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Radippool</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PoolName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PoolName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Framedipaddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Framedipaddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nasipaddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nasipaddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Calledstationid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Calledstationid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Callingstationid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Callingstationid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpiryTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ExpiryTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PoolKey)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PoolKey)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Port)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Port)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

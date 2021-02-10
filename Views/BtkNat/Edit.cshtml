@@ -1,0 +1,111 @@
+@model MyCoreApp.Models.BtkNat
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>BtkNat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="KullaniciAd" class="control-label"></label>
+                <input asp-for="KullaniciAd" class="form-control" />
+                <span asp-validation-for="KullaniciAd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OzelIp" class="control-label"></label>
+                <input asp-for="OzelIp" class="form-control" />
+                <span asp-validation-for="OzelIp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OIpPBas" class="control-label"></label>
+                <input asp-for="OIpPBas" class="form-control" />
+                <span asp-validation-for="OIpPBas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OIpPBit" class="control-label"></label>
+                <input asp-for="OIpPBit" class="form-control" />
+                <span asp-validation-for="OIpPBit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GercekIp" class="control-label"></label>
+                <input asp-for="GercekIp" class="form-control" />
+                <span asp-validation-for="GercekIp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GIpPBas" class="control-label"></label>
+                <input asp-for="GIpPBas" class="form-control" />
+                <span asp-validation-for="GIpPBas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GIpPBit" class="control-label"></label>
+                <input asp-for="GIpPBit" class="form-control" />
+                <span asp-validation-for="GIpPBit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OBasTarih" class="control-label"></label>
+                <input asp-for="OBasTarih" class="form-control" />
+                <span asp-validation-for="OBasTarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OBitTarih" class="control-label"></label>
+                <input asp-for="OBitTarih" class="form-control" />
+                <span asp-validation-for="OBitTarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpByte" class="control-label"></label>
+                <input asp-for="UpByte" class="form-control" />
+                <span asp-validation-for="UpByte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DownByte" class="control-label"></label>
+                <input asp-for="DownByte" class="form-control" />
+                <span asp-validation-for="DownByte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BKM" class="control-label"></label>
+                <input asp-for="BKM" class="form-control" />
+                <span asp-validation-for="BKM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ODurum" class="control-label"></label>
+                <input asp-for="ODurum" class="form-control" />
+                <span asp-validation-for="ODurum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BPvc" class="control-label"></label>
+                <input asp-for="BPvc" class="form-control" />
+                <span asp-validation-for="BPvc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServisNo" class="control-label"></label>
+                <input asp-for="ServisNo" class="form-control" />
+                <span asp-validation-for="ServisNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OKod" class="control-label"></label>
+                <input asp-for="OKod" class="form-control" />
+                <span asp-validation-for="OKod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imza" class="control-label"></label>
+                <input asp-for="Imza" class="form-control" />
+                <span asp-validation-for="Imza" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

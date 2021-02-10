@@ -1,0 +1,69 @@
+@model MyCoreApp.Models.Bakiye
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Bakiye</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gelir)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gelir)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gider)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gider)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ekleyen)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ekleyen)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Aciklama)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Baglanti)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Baglanti)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Baglantitip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Baglantitip)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Bakiyeid" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

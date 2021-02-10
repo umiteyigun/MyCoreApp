@@ -5,7 +5,7 @@ namespace MyCoreApp.Models
 {
     public partial class Basvuru
     {
-        public int Bid { get; set; }
+        public int id { get; set; }
         public string Badi { get; set; }
         public string Bsoyadi { get; set; }
         public string Btc { get; set; }

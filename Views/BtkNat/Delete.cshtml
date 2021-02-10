@@ -1,0 +1,123 @@
+@model MyCoreApp.Models.BtkNat
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BtkNat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KullaniciAd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KullaniciAd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OzelIp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OzelIp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OIpPBas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OIpPBas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OIpPBit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OIpPBit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GercekIp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GercekIp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GIpPBas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GIpPBas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GIpPBit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GIpPBit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OBasTarih)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OBasTarih)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OBitTarih)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OBitTarih)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpByte)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpByte)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DownByte)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DownByte)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BKM)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BKM)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ODurum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ODurum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BPvc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BPvc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServisNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServisNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OKod)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OKod)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Imza)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Imza)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,143 @@
+@model IEnumerable<MyCoreApp.Models.Basvuru>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Badi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bsoyadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Btc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bemail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Badresi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Btelefon1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Btelefon2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Btelefon3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bpaket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bftipi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bilce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brandevu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bsms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bsmsid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bbildiren)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bsonuc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Baciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bhakedis)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Badi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bsoyadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Btc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bemail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Badresi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Btelefon1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Btelefon2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Btelefon3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bpaket)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bftipi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bilce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brandevu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bsms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bsmsid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bbildiren)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bsonuc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Baciklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bhakedis)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

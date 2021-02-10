@@ -1,0 +1,65 @@
+@model MyCoreApp.Models.Bakiye
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Bakiye</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gelir" class="control-label"></label>
+                <input asp-for="Gelir" class="form-control" />
+                <span asp-validation-for="Gelir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gider" class="control-label"></label>
+                <input asp-for="Gider" class="form-control" />
+                <span asp-validation-for="Gider" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tarih" class="control-label"></label>
+                <input asp-for="Tarih" class="form-control" />
+                <span asp-validation-for="Tarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ekleyen" class="control-label"></label>
+                <input asp-for="Ekleyen" class="form-control" />
+                <span asp-validation-for="Ekleyen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Aciklama" class="control-label"></label>
+                <input asp-for="Aciklama" class="form-control" />
+                <span asp-validation-for="Aciklama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Baglanti" class="control-label"></label>
+                <input asp-for="Baglanti" class="form-control" />
+                <span asp-validation-for="Baglanti" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Baglantitip" class="control-label"></label>
+                <input asp-for="Baglantitip" class="form-control" />
+                <span asp-validation-for="Baglantitip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

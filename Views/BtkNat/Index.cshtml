@@ -1,0 +1,131 @@
+@model IEnumerable<MyCoreApp.Models.BtkNat>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KullaniciAd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OzelIp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OIpPBas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OIpPBit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GercekIp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GIpPBas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GIpPBit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OBasTarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OBitTarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpByte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DownByte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BKM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ODurum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BPvc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServisNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OKod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imza)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KullaniciAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OzelIp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OIpPBas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OIpPBit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GercekIp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GIpPBas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GIpPBit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OBasTarih)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OBitTarih)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpByte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DownByte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BKM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ODurum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BPvc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServisNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OKod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imza)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

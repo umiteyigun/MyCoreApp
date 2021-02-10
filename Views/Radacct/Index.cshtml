@@ -1,0 +1,185 @@
+@model IEnumerable<MyCoreApp.Models.Radacct>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Acctsessionid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acctuniqueid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Groupname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Realm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nasipaddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nasportid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nasporttype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acctstarttime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acctstoptime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acctsessiontime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acctauthentic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConnectinfoStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConnectinfoStop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acctinputoctets)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acctoutputoctets)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Calledstationid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Callingstationid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acctterminatecause)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Servicetype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Framedprotocol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Framedipaddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acctstartdelay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acctstopdelay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Xascendsessionsvrkey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Btk)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acctsessionid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acctuniqueid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Groupname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Realm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nasipaddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nasportid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nasporttype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acctstarttime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acctstoptime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acctsessiontime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acctauthentic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConnectinfoStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConnectinfoStop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acctinputoctets)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acctoutputoctets)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calledstationid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Callingstationid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acctterminatecause)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Servicetype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Framedprotocol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Framedipaddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acctstartdelay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acctstopdelay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Xascendsessionsvrkey)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Btk)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Radacctid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Radacctid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Radacctid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

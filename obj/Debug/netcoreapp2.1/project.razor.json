@@ -1818,6 +1818,51 @@
   "RootNamespace": "MyCoreApp",
   "Documents": [
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/PacketsInfo/Create.cshtml",
+      "TargetPath": "Views\\PacketsInfo\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radacct/Details.cshtml",
+      "TargetPath": "Views\\Radacct\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/AccessPoints/Create.cshtml",
+      "TargetPath": "Views\\AccessPoints\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Basvuru/Create.cshtml",
+      "TargetPath": "Views\\Basvuru\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Smsbilgi/Details.cshtml",
+      "TargetPath": "Views\\Smsbilgi\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Members/Details.cshtml",
+      "TargetPath": "Views\\Members\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Members/Create.cshtml",
+      "TargetPath": "Views\\Members\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/BtkNat/Edit.cshtml",
+      "TargetPath": "Views\\BtkNat\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/BtkNat/Index.cshtml",
+      "TargetPath": "Views\\BtkNat\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -1833,8 +1878,58 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radusergroup/Create.cshtml",
+      "TargetPath": "Views\\Radusergroup\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radcheck/Index.cshtml",
+      "TargetPath": "Views\\Radcheck\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Home/Contact.cshtml",
       "TargetPath": "Views\\Home\\Contact.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radippool/Index.cshtml",
+      "TargetPath": "Views\\Radippool\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UserInvoices/Delete.cshtml",
+      "TargetPath": "Views\\UserInvoices\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radgroupcheck/Index.cshtml",
+      "TargetPath": "Views\\Radgroupcheck\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/PacketsInfo/Index.cshtml",
+      "TargetPath": "Views\\PacketsInfo\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/AccessPoints/Edit.cshtml",
+      "TargetPath": "Views\\AccessPoints\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/PacketsInfo/Delete.cshtml",
+      "TargetPath": "Views\\PacketsInfo\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Smsbilgi/Delete.cshtml",
+      "TargetPath": "Views\\Smsbilgi\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radpostauth/Details.cshtml",
+      "TargetPath": "Views\\Radpostauth\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -1848,6 +1943,76 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Sayi/Details.cshtml",
+      "TargetPath": "Views\\Sayi\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/AccessPoints/Index.cshtml",
+      "TargetPath": "Views\\AccessPoints\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Sms/Edit.cshtml",
+      "TargetPath": "Views\\Sms\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Bakiye/Delete.cshtml",
+      "TargetPath": "Views\\Bakiye\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Sayi/Delete.cshtml",
+      "TargetPath": "Views\\Sayi\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radcheck/Create.cshtml",
+      "TargetPath": "Views\\Radcheck\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radgroupreply/Edit.cshtml",
+      "TargetPath": "Views\\Radgroupreply\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Sayi/Edit.cshtml",
+      "TargetPath": "Views\\Sayi\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UserInvoices/Index.cshtml",
+      "TargetPath": "Views\\UserInvoices\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Basvuru/Delete.cshtml",
+      "TargetPath": "Views\\Basvuru\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radgroupreply/Index.cshtml",
+      "TargetPath": "Views\\Radgroupreply\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Sms/Create.cshtml",
+      "TargetPath": "Views\\Sms\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radusergroup/Index.cshtml",
+      "TargetPath": "Views\\Radusergroup\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radippool/Create.cshtml",
+      "TargetPath": "Views\\Radippool\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -1855,6 +2020,26 @@
     {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Nas/Edit.cshtml",
       "TargetPath": "Views\\Nas\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radpostauth/Delete.cshtml",
+      "TargetPath": "Views\\Radpostauth\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/AccessPoints/Delete.cshtml",
+      "TargetPath": "Views\\AccessPoints\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Bakiye/Details.cshtml",
+      "TargetPath": "Views\\Bakiye\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/BtkNat/Delete.cshtml",
+      "TargetPath": "Views\\BtkNat\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -1868,6 +2053,21 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radgroupreply/Details.cshtml",
+      "TargetPath": "Views\\Radgroupreply\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Sms/Details.cshtml",
+      "TargetPath": "Views\\Sms\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Members/Edit.cshtml",
+      "TargetPath": "Views\\Members\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Areas/Identity/Pages/_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -1878,8 +2078,58 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radgroupcheck/Create.cshtml",
+      "TargetPath": "Views\\Radgroupcheck\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Bakiye/Create.cshtml",
+      "TargetPath": "Views\\Bakiye\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radippool/Details.cshtml",
+      "TargetPath": "Views\\Radippool\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Home/About.cshtml",
       "TargetPath": "Views\\Home\\About.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radacct/Edit.cshtml",
+      "TargetPath": "Views\\Radacct\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radreply/Create.cshtml",
+      "TargetPath": "Views\\Radreply\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Basvuru/Index.cshtml",
+      "TargetPath": "Views\\Basvuru\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radcheck/Details.cshtml",
+      "TargetPath": "Views\\Radcheck\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Bakiye/Index.cshtml",
+      "TargetPath": "Views\\Bakiye\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Smsbilgi/Create.cshtml",
+      "TargetPath": "Views\\Smsbilgi\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radacct/Create.cshtml",
+      "TargetPath": "Views\\Radacct\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -1888,8 +2138,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Sayi/Create.cshtml",
+      "TargetPath": "Views\\Sayi\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UsersInfo/Index.cshtml",
       "TargetPath": "Views\\UsersInfo\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/MetroIp/Create.cshtml",
+      "TargetPath": "Views\\MetroIp\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/PacketsInfo/Edit.cshtml",
+      "TargetPath": "Views\\PacketsInfo\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radreply/Delete.cshtml",
+      "TargetPath": "Views\\Radreply\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/PacketsInfo/Details.cshtml",
+      "TargetPath": "Views\\PacketsInfo\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -1898,8 +2173,88 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radgroupreply/Delete.cshtml",
+      "TargetPath": "Views\\Radgroupreply\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Members/Index.cshtml",
+      "TargetPath": "Views\\Members\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Sms/Delete.cshtml",
+      "TargetPath": "Views\\Sms\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/AccessPoints/Details.cshtml",
+      "TargetPath": "Views\\AccessPoints\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radpostauth/Create.cshtml",
+      "TargetPath": "Views\\Radpostauth\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Nas/Details.cshtml",
       "TargetPath": "Views\\Nas\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radcheck/Delete.cshtml",
+      "TargetPath": "Views\\Radcheck\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radacct/Index.cshtml",
+      "TargetPath": "Views\\Radacct\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Members/Delete.cshtml",
+      "TargetPath": "Views\\Members\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Basvuru/Edit.cshtml",
+      "TargetPath": "Views\\Basvuru\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UserInvoices/Edit.cshtml",
+      "TargetPath": "Views\\UserInvoices\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Sayi/Index.cshtml",
+      "TargetPath": "Views\\Sayi\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radpostauth/Edit.cshtml",
+      "TargetPath": "Views\\Radpostauth\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/MetroIp/Delete.cshtml",
+      "TargetPath": "Views\\MetroIp\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Smsbilgi/Edit.cshtml",
+      "TargetPath": "Views\\Smsbilgi\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radgroupcheck/Details.cshtml",
+      "TargetPath": "Views\\Radgroupcheck\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Sms/Index.cshtml",
+      "TargetPath": "Views\\Sms\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -1908,8 +2263,88 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radusergroup/Delete.cshtml",
+      "TargetPath": "Views\\Radusergroup\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/MetroIp/Index.cshtml",
+      "TargetPath": "Views\\MetroIp\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radcheck/Edit.cshtml",
+      "TargetPath": "Views\\Radcheck\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radpostauth/Index.cshtml",
+      "TargetPath": "Views\\Radpostauth\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UsersInfo/Details.cshtml",
       "TargetPath": "Views\\UsersInfo\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/BtkNat/Details.cshtml",
+      "TargetPath": "Views\\BtkNat\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radreply/Index.cshtml",
+      "TargetPath": "Views\\Radreply\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radgroupcheck/Delete.cshtml",
+      "TargetPath": "Views\\Radgroupcheck\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/MetroIp/Details.cshtml",
+      "TargetPath": "Views\\MetroIp\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/MetroIp/Edit.cshtml",
+      "TargetPath": "Views\\MetroIp\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/BtkNat/Create.cshtml",
+      "TargetPath": "Views\\BtkNat\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Bakiye/Edit.cshtml",
+      "TargetPath": "Views\\Bakiye\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radusergroup/Edit.cshtml",
+      "TargetPath": "Views\\Radusergroup\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radreply/Details.cshtml",
+      "TargetPath": "Views\\Radreply\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radgroupcheck/Edit.cshtml",
+      "TargetPath": "Views\\Radgroupcheck\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radusergroup/Details.cshtml",
+      "TargetPath": "Views\\Radusergroup\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radacct/Delete.cshtml",
+      "TargetPath": "Views\\Radacct\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -1918,13 +2353,53 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Basvuru/Details.cshtml",
+      "TargetPath": "Views\\Basvuru\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radreply/Edit.cshtml",
+      "TargetPath": "Views\\Radreply\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radgroupreply/Create.cshtml",
+      "TargetPath": "Views\\Radgroupreply\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Smsbilgi/Index.cshtml",
+      "TargetPath": "Views\\Smsbilgi\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radippool/Delete.cshtml",
+      "TargetPath": "Views\\Radippool\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UsersInfo/Edit.cshtml",
       "TargetPath": "Views\\UsersInfo\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Radippool/Edit.cshtml",
+      "TargetPath": "Views\\Radippool\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UserInvoices/Create.cshtml",
+      "TargetPath": "Views\\UserInvoices\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Nas/Delete.cshtml",
       "TargetPath": "Views\\Nas\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UserInvoices/Details.cshtml",
+      "TargetPath": "Views\\UserInvoices\\Details.cshtml",
       "FileKind": "mvc"
     }
   ],

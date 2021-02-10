@@ -1,0 +1,177 @@
+@model MyCoreApp.Models.Radacct
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Radacct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Acctsessionid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Acctsessionid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Acctuniqueid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Acctuniqueid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Groupname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Groupname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Realm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Realm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nasipaddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nasipaddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nasportid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nasportid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nasporttype)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nasporttype)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Acctstarttime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Acctstarttime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Acctstoptime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Acctstoptime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Acctsessiontime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Acctsessiontime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Acctauthentic)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Acctauthentic)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConnectinfoStart)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConnectinfoStart)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConnectinfoStop)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConnectinfoStop)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Acctinputoctets)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Acctinputoctets)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Acctoutputoctets)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Acctoutputoctets)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Calledstationid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Calledstationid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Callingstationid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Callingstationid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Acctterminatecause)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Acctterminatecause)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Servicetype)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Servicetype)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Framedprotocol)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Framedprotocol)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Framedipaddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Framedipaddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Acctstartdelay)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Acctstartdelay)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Acctstopdelay)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Acctstopdelay)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Xascendsessionsvrkey)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Xascendsessionsvrkey)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Btk)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Btk)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Radacctid" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

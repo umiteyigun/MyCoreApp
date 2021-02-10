@@ -1,0 +1,120 @@
+@model MyCoreApp.Models.Basvuru
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Basvuru</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Badi" class="control-label"></label>
+                <input asp-for="Badi" class="form-control" />
+                <span asp-validation-for="Badi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bsoyadi" class="control-label"></label>
+                <input asp-for="Bsoyadi" class="form-control" />
+                <span asp-validation-for="Bsoyadi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Btc" class="control-label"></label>
+                <input asp-for="Btc" class="form-control" />
+                <span asp-validation-for="Btc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bemail" class="control-label"></label>
+                <input asp-for="Bemail" class="form-control" />
+                <span asp-validation-for="Bemail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Badresi" class="control-label"></label>
+                <input asp-for="Badresi" class="form-control" />
+                <span asp-validation-for="Badresi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Btelefon1" class="control-label"></label>
+                <input asp-for="Btelefon1" class="form-control" />
+                <span asp-validation-for="Btelefon1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Btelefon2" class="control-label"></label>
+                <input asp-for="Btelefon2" class="form-control" />
+                <span asp-validation-for="Btelefon2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Btelefon3" class="control-label"></label>
+                <input asp-for="Btelefon3" class="form-control" />
+                <span asp-validation-for="Btelefon3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bpaket" class="control-label"></label>
+                <input asp-for="Bpaket" class="form-control" />
+                <span asp-validation-for="Bpaket" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bftipi" class="control-label"></label>
+                <input asp-for="Bftipi" class="form-control" />
+                <span asp-validation-for="Bftipi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bil" class="control-label"></label>
+                <input asp-for="Bil" class="form-control" />
+                <span asp-validation-for="Bil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bilce" class="control-label"></label>
+                <input asp-for="Bilce" class="form-control" />
+                <span asp-validation-for="Bilce" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Brandevu" class="control-label"></label>
+                <input asp-for="Brandevu" class="form-control" />
+                <span asp-validation-for="Brandevu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bsms" class="control-label"></label>
+                <input asp-for="Bsms" class="form-control" />
+                <span asp-validation-for="Bsms" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bsmsid" class="control-label"></label>
+                <input asp-for="Bsmsid" class="form-control" />
+                <span asp-validation-for="Bsmsid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bbildiren" class="control-label"></label>
+                <input asp-for="Bbildiren" class="form-control" />
+                <span asp-validation-for="Bbildiren" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bsonuc" class="control-label"></label>
+                <input asp-for="Bsonuc" class="form-control" />
+                <span asp-validation-for="Bsonuc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Baciklama" class="control-label"></label>
+                <input asp-for="Baciklama" class="form-control" />
+                <span asp-validation-for="Baciklama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhakedis" class="control-label"></label>
+                <input asp-for="Bhakedis" class="form-control" />
+                <span asp-validation-for="Bhakedis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

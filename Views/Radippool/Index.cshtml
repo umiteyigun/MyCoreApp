@@ -1,0 +1,83 @@
+@model IEnumerable<MyCoreApp.Models.Radippool>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PoolName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Framedipaddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nasipaddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Calledstationid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Callingstationid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpiryTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PoolKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Port)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoolName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Framedipaddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nasipaddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calledstationid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Callingstationid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpiryTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoolKey)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Port)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

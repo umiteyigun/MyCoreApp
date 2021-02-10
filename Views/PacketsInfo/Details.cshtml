@@ -1,0 +1,54 @@
+@model MyCoreApp.Models.PacketsInfo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PacketsInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Download)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Download)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Upload)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Upload)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Traffic)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Traffic)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sat)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -176,7 +176,8 @@ namespace MyCoreApp.Controllers
             }
                 var aa = "";
                 //var aaa = "";
-                   mikrotik.Send("/ip/service/print");
+                   mikrotik.Send("/ip/address/print");
+                   mikrotik.Send("?=address=10.1.1.1/24");
                    mikrotik.Send(".tag=sss", true);
                    foreach (string h in mikrotik.Read())
             {

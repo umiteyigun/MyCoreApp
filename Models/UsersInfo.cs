@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MyCoreApp.Models
 {
@@ -9,8 +10,15 @@ namespace MyCoreApp.Models
         public string Name { get; set; }
         public string Lastname { get; set; }
         public string Tc { get; set; }
+        [Required(ErrorMessage = "{0} alanı gereklidir.")]
+        [EmailAddress]
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,4}")]
+        [Display(Name = "Eposta Adresi", Prompt = "example@example.org")]
         public string Email { get; set; }
         public string Address { get; set; }
+        
+        [DataType(DataType.PhoneNumber)]
+        [Phone]
         public string Phone1 { get; set; }
         public string Phone2 { get; set; }
         public string Phone3 { get; set; }
@@ -31,6 +39,8 @@ namespace MyCoreApp.Models
         public string Anaadi { get; set; }
         public string Anakizliksoyadi { get; set; }
         public string Dogumyeri { get; set; }
+        
+        [DisplayFormat(DataFormatString="{0:d}", NullDisplayText = "Dogum Tarihi Girilmemiş")]
         public string Dogumtarihi { get; set; }
         public string Meslek { get; set; }
         public int? Ciltno { get; set; }

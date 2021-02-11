@@ -13,6 +13,7 @@ using System.Net.Sockets;
 using MyCoreApp.Helper;
 using Microsoft.AspNetCore.Authorization;
 
+
 namespace MyCoreApp.Controllers
 {
     public class UsersInfoController : Controller
@@ -163,6 +164,7 @@ namespace MyCoreApp.Controllers
         {
             return _context.UsersInfo.Any(e => e.Id == id);
         }
+        
         [Authorize]
         public string AhmetMehmet()
         {

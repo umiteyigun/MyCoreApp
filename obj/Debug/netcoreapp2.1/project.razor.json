@@ -1868,6 +1868,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/Shared/_Layout1.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout1.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/Views/UsersInfo/Delete.cshtml",
       "TargetPath": "Views\\UsersInfo\\Delete.cshtml",
       "FileKind": "mvc"

@@ -142,3 +142,4 @@
 /Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/obj/Debug/netcoreapp2.1/Razor/Views/UserInvoices/Details.cshtml.g.cs
 /Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/obj/Debug/netcoreapp2.1/Razor/Views/UserInvoices/Edit.cshtml.g.cs
 /Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/obj/Debug/netcoreapp2.1/Razor/Views/UserInvoices/Index.cshtml.g.cs
+/Users/umit/DotnetWEB/MyCoreApp/MyCoreApp/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_Layout1.cshtml.g.cs

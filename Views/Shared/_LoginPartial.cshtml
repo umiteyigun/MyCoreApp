@@ -3,23 +3,57 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
+
+
+
 @if (SignInManager.IsSignedIn(User))
 {
-    <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
-            </li>
-            <li>
-                <button type="submit" class="btn btn-link navbar-btn navbar-link">Logout</button>
-            </li>
-        </ul>
-    </form>
+    <li class="dropdown user user-menu">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Merhaba @UserManager.GetUserName(User)</a>
+    <ul class="dropdown-menu">
+        <li class="user-header">
+            <p>
+                @UserManager.GetUserName(User)
+                <small>Profil Bilgileri</small>
+            </p>
+
+        </li>
+        <li class="user-body">
+            <div class="row">
+                <div class="col-xs-4 text-center">
+
+                </div>
+                <div class="col-xs-4 text-center">
+
+                </div>
+                <div class="col-xs-4 text-center">
+
+                </div>
+            </div>
+        </li>
+        <li class="user-footer">
+            <div class="pull-left">
+                <a href="/Identity/Account/Manage" class="btn btn-default btn-flat">Profil</a>
+            </div>
+            <div class="pull-right">
+                <form asp-area="Identity" asp-page="/Account/Logout"
+                    asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post" id="logoutForm"
+                    class="navbar-right">
+                    <button type="submit" class="btn btn-default btn-flat" style="margin-right: 20px;">Çıkış</button>
+                </form>
+
+            </div>
+        </li>
+    </ul>
+
+
+</li>
 }
 else
 {
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Merhaba Giriş Yapınız</a>
     <ul class="nav navbar-nav navbar-right">
-        <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
-        <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
-    </ul>
+    <li><a asp-area="Identity" asp-page="/Account/Register" >Register</a></li>
+    <li><a asp-area="Identity" asp-page="/Account/Login" style="margin-right: 20px;">Login</a></li>
+</ul>
 }

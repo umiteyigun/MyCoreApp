@@ -199,21 +199,6 @@ namespace MyCoreApp.Helper
             }
             return navrat;
         }
-        public static Dictionary<int, Dictionary<string, string>> get_parse(MK mik)
-        {
-            Dictionary<int, Dictionary<string, string>> temp = new Dictionary<int, Dictionary<string, string>>();
-            int i = 0;
-            foreach (var item in mik.Read())
-            {
-                Dictionary<string, string> asd = new Dictionary<string, string>();
-                string[] tmp = item.Split('=');
-                for (int k = 0; k < tmp.Length; k += 2)
-                    asd.Add(tmp[k], tmp[k + 1]);
-                temp[i] = asd;
-                i++;
-            }
-            temp.Remove(i - 1);
-            return temp;
-        }
+
     }
 }

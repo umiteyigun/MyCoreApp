@@ -24,4 +24,7 @@
    
   </ItemGroup>
 
+   <ItemGroup>
+     <Folder Include="Araclar\" />
+   </ItemGroup>
 </Project>

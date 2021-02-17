@@ -12,7 +12,7 @@ using System.IO;
 using System.Net.Sockets;
 using MyCoreApp.Helper;
 using Microsoft.AspNetCore.Authorization;
-
+using tik4net.examples;
 
 namespace MyCoreApp.Controllers
 {
@@ -28,12 +28,12 @@ namespace MyCoreApp.Controllers
         // GET: UsersInfo
         public async Task<IActionResult> Index()
         {
-           
-                //var Connection = ConnectionFactory.OpenConnection(TikConnectionType.Api, "vpn.wifiburada.com", "admin", "As081316");
-                //var interfaces = Connection.LoadAll<Interface>();
-                //return interfaces;
-             return View(await _context.UsersInfo.ToListAsync());
-            
+
+            //var Connection = ConnectionFactory.OpenConnection(TikConnectionType.Api, "vpn.wifiburada.com", "admin", "As081316");
+            //var interfaces = Connection.LoadAll<Interface>();
+            //return interfaces;
+            return View(await _context.UsersInfo.ToListAsync());
+
         }
 
         // GET: UsersInfo/Details/5
@@ -70,10 +70,10 @@ namespace MyCoreApp.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(usersInfo);
-            //   MyCoreApp.Models.Nas nasss =new MyCoreApp.Models.Nas();
-            //    nasss.Nasname=usersInfo.Address;
-            //    var aa=_context.Users.Where(x=>x.Id=12345);
-            //    _context.Add(nasss);
+                //   MyCoreApp.Models.Nas nasss =new MyCoreApp.Models.Nas();
+                //    nasss.Nasname=usersInfo.Address;
+                //    var aa=_context.Users.Where(x=>x.Id=12345);
+                //    _context.Add(nasss);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -164,37 +164,39 @@ namespace MyCoreApp.Controllers
         {
             return _context.UsersInfo.Any(e => e.Id == id);
         }
-        
+
         [Authorize]
         public string AhmetMehmet()
         {
             MK mikrotik = new MK("vpn.wifiburada.com");
-                
-                    if (!mikrotik.Login("admin", "As081316"))
+
+            if (!mikrotik.Login("admin", "As081316"))
             {
-                    //Console.WriteLine("Could not log in");
-                    mikrotik.Close();
-                   return "Hatalı";
+                //Console.WriteLine("Could not log in");
+                mikrotik.Close();
+                return "Hatalı";
             }
-                var aa = "";
-                //var aaa = "";
-                   mikrotik.Send("/ip/address/print");
-                   mikrotik.Send("?=address=10.1.1.1/24");
-                   mikrotik.Send(".tag=sss", true);
-                   foreach (string h in mikrotik.Read())
+            var aa = "";
+            //var aaa = "";
+            mikrotik.Send("/ip/address/print");
+            mikrotik.Send("?=address=10.1.1.1/24");
+            mikrotik.Send(".tag=sss", true);
+            foreach (string h in mikrotik.Read())
             {
                 aa += h;
-                aa +="\n";            
+                aa += "\n";
                 //return h;
                 //Console.WriteLine(h);
-                
+
             }
-            
-            
+
+
             return aa;
         }
-
-
-
+        public string AhmetMehmet1()
+        {
+            ProgramExamples aa = new ProgramExamples();
+            return aa.PrintSystemResource();
+        }
     }
 }

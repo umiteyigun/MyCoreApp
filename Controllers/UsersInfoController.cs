@@ -196,7 +196,15 @@ namespace MyCoreApp.Controllers
         public string AhmetMehmet1()
         {
             ProgramExamples aa = new ProgramExamples();
-            return aa.PrintSystemResource();
+
+            var gelen = aa.PrintSystemResource();
+
+            var dizi = gelen.Split(Environment.NewLine).ToList();
+
+            var cpu = dizi.FirstOrDefault(x => x.Contains("cpu="));
+            cpu = cpu.Replace("  ", "").Replace("cpu=", "");
+
+            return cpu;
         }
     }
 }

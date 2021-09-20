@@ -1,7 +1,5 @@
-﻿@using Microsoft.AspNetCore.Identity
+﻿
 @using MyCoreApp.Models
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
 
 <!DOCTYPE html>
 <html>
@@ -77,7 +75,7 @@
                     <ul class="nav navbar-nav">
 
                         <!-- User Account: style can be found in dropdown.less -->
-                        <partial name="_LoginPartial" />
+                        @*<partial name="_LoginPartial" />*@
                         <!-- Control Sidebar Toggle Button -->
 
                     </ul>

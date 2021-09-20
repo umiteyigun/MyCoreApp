@@ -16,8 +16,10 @@ using tik4net.examples;
 
 namespace MyCoreApp.Controllers
 {
+    
     public class UsersInfoController : Controller
     {
+        
         private readonly ApplicationDbContext _context;
 
         public UsersInfoController(ApplicationDbContext context)

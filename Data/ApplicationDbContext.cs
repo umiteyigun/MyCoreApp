@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using MyCoreApp.Models;
-
+using Oracle.EntityFrameworkCore;
 
 namespace MyCoreApp.Data
 {
     public class ApplicationDbContext  : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
+
         }
         public DbSet<MyCoreApp.Models.Nas> Nas { get; set; }
         public DbSet<MyCoreApp.Models.UsersInfo> UsersInfo { get; set; }
@@ -32,8 +32,10 @@ namespace MyCoreApp.Data
         public DbSet<MyCoreApp.Models.Radusergroup> Radusergroup { get; set; }
         public DbSet<MyCoreApp.Models.Sayi> Sayi { get; set; }
         public DbSet<MyCoreApp.Models.Sms> Sms { get; set; }
+
         public DbSet<MyCoreApp.Models.Smsbilgi> Smsbilgi { get; set; }
         public DbSet<MyCoreApp.Models.UserInvoices> UserInvoices { get; set; }
-    
+        public DbSet<MyCoreApp.Models.TCNOIS> TCNOIS { get; set; }
+
     }
 }

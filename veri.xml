@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kullanicilar>
+  <kullanici>
+    <TC>11223344556</TC>
+    <kulsifre>123</kulsifre>
+  </kullanici>
+  <kullanici>
+    <TC>11223344556</TC>
+    <kulsifre>123</kulsifre>
+  </kullanici>
+  <kullanici>
+    <TC>11223344551</TC>
+    <kulsifre>123</kulsifre>
+  </kullanici>
+  <kullanici>
+    <TC>11223344545</TC>
+    <kulsifre>123</kulsifre>
+  </kullanici>
+</kullanicilar>

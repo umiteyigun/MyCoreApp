@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -7,6 +6,7 @@ namespace MyCoreApp.Models
 {
     public partial class UsersInfo 
     {
+        [Key]
         public int Id { get; set; }
         public string Name { get; set; }
         public string Lastname { get; set; }
@@ -64,5 +64,7 @@ namespace MyCoreApp.Models
         public int? Tpostano { get; set; }
         public int? Tadresno { get; set; }
         public string Vergidairesi { get; set; }
+        public string TanimliKullanici { get; set; }
+        public string TanimliKullaniciSifre { get; set; }
     }
 }

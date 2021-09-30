@@ -6,6 +6,14 @@ using System.Linq;
 using System.Net;
 
 
+
+//
+//
+// bu sayfadaki kodlar çalışmıyor ama projede login-controller-calisan-kod isimli txt belgesi var porgram.csnin üzerinde oradaki kodları kopyala yapıştır yaparak kullanabilirsiniz.
+//xml kodları yok karışıklık olmasın diye koymadım (log tutmak için)
+//
+//
+
 namespace MyCoreApp.Controllers
 {
     public class LoginController : Controller
@@ -52,8 +60,8 @@ namespace MyCoreApp.Controllers
             var mikrotik = mikrotikLogin();
             //var gonder = "/ip/hotspot/user/add name=" + usser + " password=" + pass;
             mikrotik.Send("/ip/hotspot/user/add");
-            mikrotik.Send("!=name=" + usser);
-            mikrotik.Send("!=password=" + pass);
+            mikrotik.Send("=name=" + usser);
+            mikrotik.Send("=password=" + pass);
             mikrotik.Close();
             return true;
         }

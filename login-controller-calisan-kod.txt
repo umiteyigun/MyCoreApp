@@ -1,0 +1,168 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MyCoreApp.Data;
+using MyCoreApp.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.IO;
+using System.Xml;
+using System.Xml.Linq;
+using System.Data;
+using System.Text;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Oracle.EntityFrameworkCore;
+using Oracle.ManagedDataAccess;
+using OracleInternal.ServiceObjects;
+using MyCoreApp.Helper;
+using tik4net.examples;
+using System.Web;
+using Microsoft.AspNetCore.Http;
+using System.Net;
+using DanilovSoft.MikroApi;
+using System.Net.Sockets;
+
+
+namespace MyCoreApp.Controllers
+{
+    public class LoginController : Controller
+    {
+
+        private readonly ApplicationDbContext _context;
+        public LoginController(ApplicationDbContext dbContext)
+        {
+            _context = dbContext;
+        }
+
+        public string ipadresiAl()
+        {
+            string ipAdres = "";
+            foreach (IPAddress adres in Dns.GetHostAddresses(Dns.GetHostName()))
+            {
+                ipAdres = "Ip Adresi: " + adres;
+            }
+            return ipAdres;
+        }
+
+        [HttpGet]
+        public IActionResult Index()
+        {
+            //foreach (IPAddress adres in Dns.GetHostAddresses(Dns.GetHostName()))
+            //{
+            //    var mesaj = adres;
+            //    ViewData["ipget"] = mesaj;
+
+            //}
+            //return View(ViewData["ipget"]);
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Index(string tanimliKullanici)
+        {
+
+            var ipAdresi = ipadresiAl();
+
+            var user = _context.TCNOIS.Where(w => w.YATANHASTATCS == tanimliKullanici).ToList().FirstOrDefault();
+            if (user != null)
+            {
+
+                string usser = tanimliKullanici;
+                string pass = tanimliKullanici;
+                MK mikrotik = new MK("vpn.wifiburada.com");
+
+                var baglandimi = mikrotik.Login("admin", "As081316");
+                if (!baglandimi)
+                {
+                    mikrotik.Close();
+                    return Redirect("/Login/Index");
+                }
+                else
+                {
+                    var aa = "";
+
+                    //varmı yokmu sorgusu
+                    // ip hotspot user print where name=a
+
+                    //kullanıcı ekleme
+                    // ip hotspot user add name=a/password=a
+
+                    mikrotik.Send("/ip/hotspot/user/print");
+                    mikrotik.Send("?=name=" + usser);
+                    mikrotik.Send(".tag=sss", true);
+                    foreach (string h in mikrotik.Read())
+                    {
+                        // aa += h + Environment.NewLine;
+                        aa += h;
+                    }
+                    if (aa.Contains(usser))
+                    {
+
+                        //  ip hotspot active login user = a password = aa ip = ip
+                        mikrotik.Send("/ip/hotspot/active/login");
+                        mikrotik.Send("=user=" + usser);
+                        mikrotik.Send("=password=" + pass);
+                        mikrotik.Send("=ip=" + ipAdresi);
+
+                        return Redirect("/Home/Index");
+                    }
+                    //var aa = "";
+                    else
+                    {
+                        var bb = "";
+                        mikrotik.Send("/ip/hotspot/user/add");
+                        mikrotik.Send("=name=" + usser);
+                        mikrotik.Send("=password=" + pass);
+                        if (bb == "")
+                        {
+                            mikrotik.Send("/ip/hotspot/user/print");
+                            mikrotik.Send("?=name=" + usser);
+                            mikrotik.Send(".tag=sss", true);
+                            foreach (string c in mikrotik.Read())
+                            {
+                                // aa += h + Environment.NewLine;
+                                bb += c;
+
+                            }
+                            if (bb.Contains(usser))
+                            {
+
+                                //  ip hotspot active login user = a password = aa ip = ip
+                                mikrotik.Send("/ip/hotspot/active/login");
+                                mikrotik.Send("=user=" + usser);
+                                mikrotik.Send("=password=" + pass);
+                                mikrotik.Send("=ip=" + ipAdresi);
+
+                                return Redirect("/Home/Index");
+                            }
+                            else
+                            {
+
+                                //  ip hotspot active login user = a password = aa ip = ip
+                                mikrotik.Send("/ip/hotspot/active/login");
+                                mikrotik.Send("=user=" + usser);
+                                mikrotik.Send("=password=" + pass);
+                                mikrotik.Send("=ip=" + ipAdresi);
+
+                                return Redirect("/Home/Index");
+                            }
+                        }
+
+                        //  ip hotspot active login user = a password = aa ip = ip
+                        mikrotik.Send("/ip/hotspot/active/login");
+                        mikrotik.Send("=user=" + usser);
+                        mikrotik.Send("=password=" + pass);
+                        mikrotik.Send("=ip=" + ipAdresi);
+
+                        return Redirect("/Home/Index");
+                    }
+                }
+            }
+            else
+            {
+                ViewData["Hata"] = "Girmiş Olduğunuz TC numarası sistemde bulunmamaktadır.";
+                return View(ViewData["Hata"]);
+            }
+        }
+    }
+}
